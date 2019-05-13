@@ -33,14 +33,16 @@ void sort(int a[],int n)
     	
     	printf("The array before the sort:");
 
+    	for(i=0;i<16;i++)
+    	printf("%i \t",array[i]); // before sort
+
     	sort(array,16);
 
         for(i=0;i<16;i++)
-    	printf("%i \t",array[i]);
+    	printf("%i \t",array[i]); // after sort
 
         printf("\n");
         return 0;
 
 
     }
-
