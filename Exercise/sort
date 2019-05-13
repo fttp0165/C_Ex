@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+
+//sort function input :a array & array max size
+
+void sort(int a[],int n)
+{
+	int i,j,temp; 				// i & j are sentry , temp is Register 
+
+	for(i=0;i < n-1; i++) 		// The sentry is represent left position
+	{
+	  for (j=i+1;j<n;j++)		// The sentry is represent right position
+	  {
+	  	if(a[i]>a[j])    		// if left position value bigger than right position value swap both.
+	  	{
+	  		temp=a[i]; 			// save  left position value
+	  		a[i]=a[j];          // left value  equal right  value 
+	  		a[j]=temp;          // right  value equal left value 
+	  	}
+	  }
+
+	}
+}
+
+    int main(void)
+    {
+    	int i; 
+    	// set array
+    	int array[16]={34,-5,6,0,12,100,56,22,
+    		44,-3,-9,12,17,22,6,11};
+
+    	void sort(int a[],int n); // declare sort function
+    	
+    	printf("The array before the sort:");
+
+    	sort(array,16);
+
+        for(i=0;i<16;i++)
+    	printf("%i \t",array[i]);
+
+        printf("\n");
+        return 0;
+
+
+    }
+
