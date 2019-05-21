@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+//linklist
+int main(void)
+    {
+    	struct entry // define struct entry include a value and struct point next
+    	{
+    		int  			value;
+    		struct entry 	*next;
+    	};
+
+    	struct entry n1,n2,n3; // declare struct n1 n2 n3
+        int x;
+        n1.value=100; 		   //struct n1 value equal 100
+        n2.value=200; 		   //struct n2 value equal 200
+        n3.value=300;		   //struct n3 value equal 300
+
+        n1.next= &n2;          //struct n1 next direction struct n2 
+        n2.next= &n3;		   //struct n2 next direction struct n3
+        x=n1.next->value;      // x equal  get struct n1 direction struct's value
+        printf("%i\n",x);       
+        printf("%i",n2.next->value);
+
+        return 0;
+    }
